@@ -1,4 +1,5 @@
 import "./Signup.css";
+import { Link } from "react-router-dom";
 import Logo from "../img/LOGO.svg";
 import Approve from "../img/mdi_approve.svg";
 import Google from "../img/GoogleLogo.svg";
@@ -46,7 +47,9 @@ function Signup(){
                 </article>
             </section>
             <section>
-                <p>Already have an account ? <span>Sign in</span></p>
+                <p>Already have an account ? <span onClick={() => {
+                    document.querySelector("#login").click();
+                }}>Sign in</span></p>
                 <h2>Personal Information</h2>
                 <p>This helps properly profile you as a user of our platform as well as to prevent theft. Your privacy and security is important to us ans we will never share your information to the third party or leakage world.</p>
                 <nav>
@@ -98,6 +101,7 @@ function Signup(){
                     </div>
                 </form>
             </section>
+            <Link to="/Login" id="login"/>
         </div>
     )
 }

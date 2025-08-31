@@ -43,8 +43,10 @@ function Account(){
                 </article>
             </section>
             <section>
-                <p>Already have an account ? <span>Sign in</span></p>
-                <li>Select account type</li>
+                <p>Already have an account ? <span onClick={() => {
+                    document.querySelector("#login").click();
+                }}>Sign in</span></p>
+                <li>Select Account Type</li>
                 <p>Are you a creative actively searching for a job, you are looking to fill a position(s) at your Organization?</p>
                 <aside>
                     <img src={Bulb} alt="" />
@@ -65,6 +67,7 @@ function Account(){
                 }}>Next</button>
             </section>
             <Link to="/Signup" id="sign"/>
+            <Link to="/Login" id="login"/>
         </div>
     )
 }
