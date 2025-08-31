@@ -30,7 +30,7 @@ function Login(){
                         <input type="password" placeholder="Enter your Password" name="password" id="password" />
                     </div>
                     <nav>
-                        <p> <input type="checkbox" id="check" /> Remember me</p>
+                        <p><input type="checkbox" id="check" /> Remember me</p>
                         <li>Forgotten password ?</li>
                     </nav>
                     <div>
