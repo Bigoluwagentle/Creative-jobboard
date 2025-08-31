@@ -102,7 +102,9 @@ function Signup(){
                     </div>
                     <div id="div">
                         <button>Back</button>
-                        <button>Sign up</button>
+                        <button onClick={() => {
+                            document.querySelector("#login").click();
+                        }}>Sign up</button>
                     </div>
                 </form>
             </motion.section>

@@ -41,11 +41,14 @@ function Login(){
                         <li>Forgotten password ?</li>
                     </nav>
                     <div>
-                        <button>Log in</button>
+                        <button onClick={() => {
+                            document.querySelector("#Dashboard").click();
+                        }}>Log in</button>
                     </div>
                 </form>
             </motion.article>
-            <Link to="/Signup" id="Signup"/>
+            <Link to="/Account" id="Signup"/>
+            <Link to="/Dashboard" id="Dashboard"/>
         </div>
     )
 }

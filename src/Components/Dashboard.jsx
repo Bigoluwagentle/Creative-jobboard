@@ -1,4 +1,4 @@
-import "./LandingPage.css";
+import "./Dashboard.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Logo from "../img/LOGO (1).svg";
@@ -15,10 +15,11 @@ import Whatsapp from "../img/mingcute_whatsapp-fill.svg";
 import Framer79 from "../img/Frame 79.svg";
 import Menu from "../img/bx_menu.svg";
 import Close from "../img/icon-close.svg";
+import Profile from "../img/profile.png";
 
-function LandingPage(){
+function Dashboard(){
     return(
-        <div id="landing">
+        <div id="dashboard">
             <div id="header">
                 <header>
                     <img src={Logo} alt="logo" />
@@ -28,16 +29,15 @@ function LandingPage(){
                         <li>Pricing</li>
                         <li>Blog</li>
                     </div>
-                    <motion.div
-                        initial={{ opacity: 0, x: 150 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 20, type: "spring", stiffness: 400 }}
+                    <motion.div id="pro"
+                        transition={{ duration: 2, type: "spring", stiffness: 300 }}
                         whileHover={{
                         scale: 1.2
                         }}
                     >
-                        <button>Log in</button>
-                        <button>Sign up</button>
+                    <img src={Profile} id="profile" alt="" />
+                    <h4>Hi, Abdulmalik <i class="fa-solid fa-chevron-down"></i></h4>
+                    {/* <i class="fa-solid fa-user"></i> */}
                     </motion.div>
                     <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
                         document.querySelector("#mobile").style.display = "block";
@@ -311,9 +311,9 @@ function LandingPage(){
                     </nav>
                 </div>
             </footer>
-            <Link to="/Account" id="Signup"/>
+            <Link to="/Signup" id="Signup"/>
             <Link to="/Login" id="log"/>
         </div>
     )
 }
-export default LandingPage;
+export default Dashboard;
