@@ -140,14 +140,13 @@
         > article{
             width: 95%;
             > form{
+                width: 90%;
                 > nav{
                     flex-direction: column;
                 }
                 > div{
                     + nav{
                         flex-direction: row;
-                        justify-content: space-between;
-                        font-size: 12px;
                     }
                 }
             }
