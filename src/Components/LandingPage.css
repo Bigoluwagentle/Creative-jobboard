@@ -473,6 +473,9 @@
                 align-items: center;
                 margin-top: 50px;
             }
+            > img{
+                width: 300px;
+            }
         }
         > footer{
             flex-direction: column;
