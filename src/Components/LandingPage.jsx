@@ -54,7 +54,7 @@ function LandingPage(){
                         >Get Started</motion.button>
                     </aside>
                     <motion.img src={HeaderImage} alt="headerimage"
-                        initial={{ y: -400 }}
+                        initial={{ y: -200 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 5, type: "spring", stiffness: 300 }}
                     />
@@ -136,7 +136,7 @@ function LandingPage(){
             <div className="container">
                 <div>
                     <motion.h4
-                        initial={{ x: 350 }}
+                        initial={{ x: 150 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 25, type: "spring", stiffness: 300 }}
                     >Find your dream job</motion.h4>
