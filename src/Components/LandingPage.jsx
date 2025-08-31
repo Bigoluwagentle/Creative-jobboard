@@ -2,6 +2,7 @@ import "./LandingPage.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Logo from "../img/LOGO (1).svg";
+import Logo1 from "../img/LOGO.svg";
 import HeaderImage from "../img/Frame 8.svg";
 import Arrow from "../img/Vector.svg";
 import Group from "../img/Group 1.svg";
@@ -13,6 +14,7 @@ import Gmail from "../img/skill-icons_gmail-light.svg";
 import Whatsapp from "../img/mingcute_whatsapp-fill.svg";
 import Framer79 from "../img/Frame 79.svg";
 import Menu from "../img/bx_menu.svg";
+import Close from "../img/icon-close.svg";
 
 function LandingPage(){
     return(
@@ -37,8 +39,38 @@ function LandingPage(){
                         <button>Log in</button>
                         <button>Sign up</button>
                     </motion.div>
-                    <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} />
+                    <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
+                        document.querySelector("#mobile").style.display = "block";
+                    }} />
                 </header>
+                <motion.div id="mobile"
+                    initial={{ opacity: 0, y: 150 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 20, type: "spring", stiffness: 400 }}
+                >
+                    <div className="mobile">
+                        <nav>
+                            <img src={Logo1} alt="" />
+                            <img src={Close} alt="close" style={{width: "20px"}} onClick={() => {
+                                document.querySelector("#mobile").style.display = "none";
+                            }} />
+                        </nav>
+                        <div>
+                            <li>Home</li>
+                            <li>About us</li>
+                            <li>Pricing</li>
+                            <li>Blog</li>
+                        </div>
+
+                        <button onClick={() => {
+                            document.querySelector("#log").click();
+                        }}>Login</button>
+
+                        <button onClick={() => { 
+                            document.querySelector("#Signup").click();
+                        }}>Sign up</button>
+                    </div>
+                </motion.div>
                 <section>
                     <aside>
                         <h1>Join the <span>Global Phenomenon</span> in the recruitment space</h1>
@@ -280,6 +312,7 @@ function LandingPage(){
                 </div>
             </footer>
             <Link to="/Signup" id="Signup"/>
+            <Link to="/Login" id="log"/>
         </div>
     )
 }
