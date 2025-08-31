@@ -12,7 +12,9 @@ function Login(){
                 <p>Doesn't have an account? <span onClick={() => {
                     document.querySelector("#Signup").click();
                 }}>Sign up</span></p>
-                <button>Sign up</button>
+                <button onClick={() => {
+                    document.querySelector("#Signup").click();
+                }}>Sign up</button>
             </section>
             <article>
                 <legend>Log in</legend>
