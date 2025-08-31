@@ -1,4 +1,5 @@
 #landing{
+    overflow: hidden;
     #header{
         width: 100%;
         min-height: 100vh;
@@ -432,6 +433,7 @@
             flex-direction: column-reverse;
             align-items: center;
             width: 100%;
+            margin: 0px;
             > img{
                 width: 300px;
             }

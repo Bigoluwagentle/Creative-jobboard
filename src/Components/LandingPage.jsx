@@ -1,5 +1,6 @@
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Logo from "../img/LOGO (1).svg";
 import HeaderImage from "../img/Frame 8.svg";
 import Arrow from "../img/Vector.svg";
@@ -25,37 +26,67 @@ function LandingPage(){
                         <li>Pricing</li>
                         <li>Blog</li>
                     </div>
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 150 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 20, type: "spring", stiffness: 400 }}
+                        whileHover={{
+                        scale: 1.2
+                        }}
+                    >
                         <button>Log in</button>
                         <button>Sign up</button>
-                    </div>
+                    </motion.div>
                     <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} />
                 </header>
                 <section>
                     <aside>
                         <h1>Join the <span>Global Phenomenon</span> in the recruitment space</h1>
                         <p>If you believe in the strength and power of creative thinking in recruiting and if you are a team player and lover of thrive a fast paced environment then get ready to play a crucial part in our creation of the future.</p>
-                        <button onClick={() => {
-                            document.querySelector("#Signup").click();}}>Get Started</button>
+                        <motion.button 
+                            initial={{ x: -150 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 5, type: "spring", stiffness: 300 }}
+                            whileHover={{
+                            scale: 1.2
+                            }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
+                        >Get Started</motion.button>
                     </aside>
-                    <img src={HeaderImage} alt="headerimage" />
+                    <motion.img src={HeaderImage} alt="headerimage"
+                        initial={{ y: -400 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 5, type: "spring", stiffness: 300 }}
+                    />
                 </section>
 
                 <article>
                     <h4>Search for a role</h4>
                     <div>
-                        <nav>
+                        <motion.nav
+                            initial={{ x: 150 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 5, type: "spring", stiffness: 300 }}
+                        >
                             <input type="text" value="Job Title" />
                             <img src={Arrow} alt="" />
-                        </nav>
-                        <nav>
+                        </motion.nav>
+                        <motion.nav
+                            initial={{ y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 5, type: "spring", stiffness: 300 }}
+                        >
                             <input type="text" value="Location" />
                             <img src={Arrow} alt="" />
-                        </nav>
-                        <nav>
+                        </motion.nav>
+                        <motion.nav
+                            initial={{ x: -150 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 5, type: "spring", stiffness: 300 }}
+                        >
                             <input type="text" value="Profesional Level" />
                             <img src={Arrow} alt="" />
-                        </nav>
+                        </motion.nav>
                     </div>
                 </article>
             </div>
@@ -64,7 +95,14 @@ function LandingPage(){
                     <img src={Star} alt="start" />
                     <h4>Explore amazing categories</h4>
                     <p>We have the largest database of job & career opportunity information in the world and our job listings are updated regularly to keep you up-to-date on as an early bird.</p>
-                    <button>See All Categories</button>
+                    <motion.button
+                        initial={{ x: -150 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 5, type: "spring", stiffness: 300 }}
+                        whileHover={{
+                        scale: 1.2
+                        }}
+                    >See All Categories</motion.button>
                 </nav>
                 <img src={Group} alt="group" />
             </summary>
@@ -84,7 +122,11 @@ function LandingPage(){
                         </nav>
                     </div>
                 </nav>
-                <img src={Frame33} alt="" />
+                <motion.img src={Frame33} alt=""
+                    initial={{ x: 250 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                />
             </div>
             {/* <div id="test">
                 <p>TESTIMONALS</p>
@@ -93,7 +135,11 @@ function LandingPage(){
 
             <div className="container">
                 <div>
-                    <h4>Find your dream job</h4>
+                    <motion.h4
+                        initial={{ x: 350 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                    >Find your dream job</motion.h4>
                     <p>100,000 active job waiting for you </p>
                 </div>
                 <section>
@@ -104,7 +150,11 @@ function LandingPage(){
                         </nav>
                         <h4>London, UK</h4>
                         <p>You are a professional who writes clear, consistency for ads and marketing material They work closely alongside web general...</p>
-                        <button>Apply Now</button>
+                        <motion.button
+                            initial={{ x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                        >Apply Now</motion.button>
                     </div>
                     <div>
                         <nav>
@@ -113,7 +163,11 @@ function LandingPage(){
                         </nav>
                         <h4>United States</h4>
                         <p>You are a professional who writes clear, consistency for ads and marketing material They work closely alongside web general...</p>
-                        <button>Apply Now</button>
+                        <motion.button
+                            initial={{ x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                        >Apply Now</motion.button>
                     </div>
                     <div>
                         <nav>
@@ -122,7 +176,11 @@ function LandingPage(){
                         </nav>
                         <h4>United States</h4>
                         <p>You are a professional who writes clear, consistency for ads and marketing material They work closely alongside web general...</p>
-                        <button>Apply Now</button>
+                        <motion.button
+                            initial={{ x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                        >Apply Now</motion.button>
                     </div>
                     <div>
                         <nav>
@@ -131,7 +189,11 @@ function LandingPage(){
                         </nav>
                         <h4>London, UK</h4>
                         <p>You are a professional who writes clear, consistency for ads and marketing material They work closely alongside web general...</p>
-                        <button>Apply Now</button>
+                        <motion.button
+                            initial={{ x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                        >Apply Now</motion.button>
                     </div>
                     <div>
                         <nav>
@@ -140,7 +202,11 @@ function LandingPage(){
                         </nav>
                         <h4>United States</h4>
                         <p>You are a professional who writes clear, consistency for ads and marketing material They work closely alongside web general...</p>
-                        <button>Apply Now</button>
+                        <motion.button
+                            initial={{ x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                        >Apply Now</motion.button>
                     </div>
                     <div>
                         <nav>
@@ -149,7 +215,11 @@ function LandingPage(){
                         </nav>
                         <h4>United States</h4>
                         <p>You are a professional who writes clear, consistency for ads and marketing material They work closely alongside web general...</p>
-                        <button>Apply Now</button>
+                        <motion.button
+                            initial={{ x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                        >Apply Now</motion.button>
                     </div>
                 </section>
             </div>
@@ -158,10 +228,14 @@ function LandingPage(){
                 <nav>
                     <h4>Subscribe to our newsletter</h4>
                     <p>Subscribe to our newsletter for regular company updates and be the first to know about new job openings, promoted blog articles and discounts on pricing plans. </p>
-                    <div>
+                    <motion.div
+                        initial={{ x: -250 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                    >
                         <input type="email" placeholder="Enter Your Email Address" />
                         <button>Subscribe</button>
-                    </div>
+                    </motion.div>
                 </nav>
                 <img src={Frame73} alt="framer" />
             </div>

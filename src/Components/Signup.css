@@ -3,6 +3,7 @@
     min-height: 100vh;
     flex-wrap: wrap;
     width: 100%;
+    overflow: hidden;
     section{
         flex: 1;
         background-color: #14E522;

@@ -1,5 +1,6 @@
 import "./Signup.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Logo from "../img/LOGO.svg";
 import Approve from "../img/mdi_approve.svg";
 import Google from "../img/GoogleLogo.svg";
@@ -46,7 +47,11 @@ function Signup(){
                     </nav>
                 </article>
             </section>
-            <section>
+            <motion.section
+                initial={{ y: -150 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 25, type: "spring", stiffness: 300 }}
+            >
                 <p>Already have an account ? <span onClick={() => {
                     document.querySelector("#login").click();
                 }}>Sign in</span></p>
@@ -100,7 +105,7 @@ function Signup(){
                         <button>Sign up</button>
                     </div>
                 </form>
-            </section>
+            </motion.section>
             <Link to="/Login" id="login"/>
         </div>
     )

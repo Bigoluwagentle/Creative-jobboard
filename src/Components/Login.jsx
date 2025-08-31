@@ -1,5 +1,6 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Logo from "../img/LOGO (1).svg";
 import Google from "../img/GoogleLogo.svg";
 import Facebook from "../img/uiw_facebook.svg";
@@ -16,7 +17,11 @@ function Login(){
                     document.querySelector("#Signup").click();
                 }}>Sign up</button>
             </section>
-            <article>
+            <motion.article
+                initial={{ y: -250 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 25, type: "spring", stiffness: 300 }}
+            >
                 <legend>Log in</legend>
                 <form method="get">
                     <nav>
@@ -39,7 +44,7 @@ function Login(){
                         <button>Log in</button>
                     </div>
                 </form>
-            </article>
+            </motion.article>
             <Link to="/Signup" id="Signup"/>
         </div>
     )
