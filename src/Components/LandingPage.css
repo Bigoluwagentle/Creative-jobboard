@@ -448,7 +448,11 @@
                     flex-direction: column;
                     align-items: center;
                     margin-top: 50px;
+                    width: 100%;
                     > nav{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         width: 100%;
                         margin-bottom: 30px;
                         text-align: center;
@@ -475,7 +479,10 @@
         #content{
             flex-direction: column-reverse;
             align-items: center;
+            width: 100%;
             padding-bottom: 20px;
+            padding-top: 20px;
+            margin: 0px;
             > nav{
                 display: flex;
                 flex-direction: column;
