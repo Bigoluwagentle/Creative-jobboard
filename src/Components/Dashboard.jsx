@@ -1,76 +1,18 @@
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Logo from "../img/LOGO (1).svg";
-import Logo1 from "../img/LOGO.svg";
 import HeaderImage from "../img/Frame 8.svg";
 import Arrow from "../img/Vector.svg";
 import Group from "../img/Group 1.svg";
 import Star from "../img/solar_star-bold-duotone.svg";
 import Frame33 from "../img/Frame 33.svg";
 import Frame73 from "../img/Frame 73.svg";
-import Twiiter from "../img/prime_twitter.svg";
-import Gmail from "../img/skill-icons_gmail-light.svg";
-import Whatsapp from "../img/mingcute_whatsapp-fill.svg";
-import Framer79 from "../img/Frame 79.svg";
-import Menu from "../img/bx_menu.svg";
-import Close from "../img/icon-close.svg";
-import Profile from "../img/profile.png";
+import Footer from "./Footer";
 
 function Dashboard(){
     return(
         <div id="dashboard">
             <div id="header">
-                <header>
-                    <img src={Logo} alt="logo" />
-                    <div>
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Pricing</li>
-                        <li>Blog</li>
-                    </div>
-                    <motion.div id="pro"
-                        transition={{ duration: 2, type: "spring", stiffness: 300 }}
-                        whileHover={{
-                        scale: 1.2
-                        }}
-                    >
-                    <img src={Profile} id="profile" alt="" />
-                    <h4>Hi, Abdulmalik <i class="fa-solid fa-chevron-down"></i></h4>
-                    {/* <i class="fa-solid fa-user"></i> */}
-                    </motion.div>
-                    <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
-                        document.querySelector("#mobile").style.display = "block";
-                    }} />
-                </header>
-                <motion.div id="mobile"
-                    initial={{ opacity: 0, y: 150 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 20, type: "spring", stiffness: 400 }}
-                >
-                    <div className="mobile">
-                        <nav>
-                            <img src={Logo1} alt="" />
-                            <img src={Close} alt="close" style={{width: "20px"}} onClick={() => {
-                                document.querySelector("#mobile").style.display = "none";
-                            }} />
-                        </nav>
-                        <div>
-                            <li>Home</li>
-                            <li>About us</li>
-                            <li>Pricing</li>
-                            <li>Blog</li>
-                        </div>
-
-                        <button onClick={() => {
-                            document.querySelector("#log").click();
-                        }}>Login</button>
-
-                        <button onClick={() => { 
-                            document.querySelector("#Signup").click();
-                        }}>Sign up</button>
-                    </div>
-                </motion.div>
                 <section>
                     <aside>
                         <h1>Join the <span>Global Phenomenon</span> in the recruitment space</h1>
@@ -271,48 +213,10 @@ function Dashboard(){
                 </nav>
                 <img src={Frame73} alt="framer" />
             </div>
-
-            <footer>
-                <div>
-                    <img src={Logo} alt="" />
-                    {/* <p>Join a network of over 30,000 people making a living and scaling their businesses on our platform.</p> */}
-                </div>
-                <div>
-                    <p>Our Roadmap</p>
-                    <li>What is Creative?</li>
-                    <li>Why Creative?</li>
-                    <li>Who’s using Creative?</li>
-                </div>
-                <div>
-                    <p>Company</p>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Portfolio</li>
-                    <li>Testimonial</li>
-                </div>
-                <div>
-                    <p>Resources</p>
-                    <li>Documentation</li>
-                    <li>Integration</li>
-                    <li>Partners </li>
-                    <li>Case Studies</li>
-                    <li>Blog</li>
-                    <li>Our Community</li>
-                </div>
-                <div>
-                    <p>Contact us</p>
-                    <li>info@creative.com</li>
-                    <li>+2348143861167</li>
-                    <nav>
-                        <img src={Twiiter} alt="Twitter icon" />
-                        <img src={Gmail} alt="gmail icon" />
-                        <img src={Whatsapp} alt="whatspp" />
-                        <img src={Framer79} alt="linkedin" />
-                    </nav>
-                </div>
-            </footer>
+            <Footer/>
             <Link to="/Signup" id="Signup"/>
             <Link to="/Login" id="log"/>
+            <Link to="/About us" id="about"/>
         </div>
     )
 }

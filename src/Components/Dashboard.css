@@ -8,56 +8,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        header{
-            width: 95%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 0px;
-            > img{
-                width: 150px;
-            }
-            > div{
-                display: flex;
-                align-items: center;
-                gap: 25px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                > li{
-                    list-style-type: none;
-                    color: gray;
-                    cursor: pointer;
-                }
-                > button{
-                    color:  #14E522;
-                    border: none;
-                    background-color: transparent;
-                    cursor: pointer;
-                    + button{
-                        background-color: #14E522;
-                        color: #FFF;
-                        min-height: 30px;
-                        min-width: 80px;
-                        border-radius: 3px;
-                    }
-                }
-            }
-            #pro{
-                display:flex;
-                align-items: center;
-                cursor: pointer;
-                gap: 5px;
-                > img{
-                    width: 30px;
-                    border-radius: 100px;
-                }
-            }
-            #menu{
-                display: none;
-            }
-        }
-        > #mobile{
-            display: none;
-        }
         > section{
             width: 95%;
             display: flex;
@@ -342,104 +292,10 @@
             width: 380px;
         }
     }
-    > footer{
-        width: 95%;
-        margin: 100px auto 0px auto;
-        display: flex;
-        justify-content: space-between;
-        > div{
-            > img{
-                width: 200px;
-                + p{
-                    width: 50%;
-                }
-            }
-            > p{
-                font-family: Arial, Helvetica, sans-serif;
-                margin-bottom: 20px;
-            }
-            > li{
-                list-style-type: none;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 10px;
-                font-size: 13px;
-            }
-            > nav{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 20px;
-                img{
-                    width: 20px;
-                }
-            }
-        }
-    }
 }
 @media screen and (max-width: 840px){
     #dashboard{
         #header{
-            > header{
-                > div{
-                    display: none;
-                }
-                #menu{
-                    display: inline-block;
-                }
-            }
-            > #mobile{
-                position: absolute;
-                width: 100%;
-                top: 0;
-                .mobile{
-                    background-color: #14E522;
-                    min-height: 60vh;
-                    padding-bottom: 30px;
-                    > nav{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 95%;
-                        margin:auto;
-                        padding-top: 20px;
-                        > img{
-                            width: 150px;
-                        }
-                    }
-                    > div{
-                        width: 95%;
-                        margin:50px auto 0px auto;
-                        > li{
-                            list-style-type: none;
-                            padding: 10px;
-                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                            background-color: #FFF;
-                            margin-bottom: 15px;
-                            border-radius: 4px;
-                            cursor: pointer;
-                            &:hover{
-                                background-color: #E7F0FD;
-                            }
-                        }
-                    }
-                    > button{
-                        display: block;
-                        width: 95%;
-                        margin: 20px auto;
-                        min-height: 40px;
-                        background-color: #FFF;
-                        color: #14E522;
-                        border: none;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        +  button{
-                            background-color: transparent;
-                            border: 2px solid #FFF;
-                            color: #FFF;
-                        }
-                    }
-                }
-            }
             > section{
                 flex-direction: column-reverse;
                 align-items: center;
@@ -578,12 +434,6 @@
                 width: 300px;
             }
         }
-        > footer{
-            flex-direction: column;
-            align-items: center;
-            > div{
-                margin-bottom: 40px;
-            }
-        }
+        
     }
 }

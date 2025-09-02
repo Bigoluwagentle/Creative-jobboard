@@ -1,0 +1,161 @@
+#mobiles{
+    width: 95%;
+    > header{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0px;
+        > img{
+            width: 150px;
+        }
+        > div{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            > li{
+                list-style-type: none;
+                color: gray;
+                cursor: pointer;
+            }
+            .active{
+                color: #222;
+                border-bottom: 2px solid #14E522;
+                text-align: center;
+            }
+            > button{
+                color:  #14E522;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                + button{
+                    background-color: #14E522;
+                    color: #FFF;
+                    min-height: 30px;
+                    min-width: 80px;
+                    border-radius: 3px;
+                }
+            }
+        }
+        #pro{
+            display:flex;
+            align-items: center;
+            cursor: pointer;
+            gap: 5px;
+            > img{
+                width: 30px;
+                border-radius: 100px;
+            }
+        }
+        #menu{
+            display: none;
+        }
+    }
+    > #mobile{
+        display: none;
+    }
+    > section{
+        width: 95%;
+        display: flex;
+        margin-top: 50px;
+        > aside{
+            > h1{
+                font-family: Arial, Helvetica, sans-serif;
+                width: 84%;
+                margin-bottom: 30px;
+                margin-top: 50px;
+                line-height: 50px;
+                font-size: 40px;
+                > span{
+                    color: #14E522;
+                }
+            }
+            > p{
+                width: 85%;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-bottom: 50px;
+            }
+            > button{
+                min-width: 300px;
+                min-height: 45px;
+                background-color: #14E522;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                color: #FFF;
+            }
+        }
+        > img{
+            width: 500px;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 800px){
+    #mobiles{
+        > header{
+            > div{
+                display: none;
+            }
+            #menu{
+                display: inline-block;
+            }
+        }
+        #mobile{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            .mobile{
+                background-color: #14E522;
+                min-height: 60vh;
+                padding-bottom: 30px;
+                > nav{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 95%;
+                    margin:auto;
+                    padding-top: 20px;
+                    > img{
+                        width: 150px;
+                    }
+                }
+                > div{
+                    width: 95%;
+                    margin:50px auto 0px auto;
+                    > li{
+                        list-style-type: none;
+                        padding: 10px;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        background-color: #FFF;
+                        margin-bottom: 15px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #E7F0FD;
+                        }
+                    }
+                }
+                > button{
+                    display: block;
+                    width: 95%;
+                    margin: 20px auto;
+                    min-height: 40px;
+                    background-color: #FFF;
+                    color: #14E522;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    +  button{
+                        background-color: transparent;
+                        border: 2px solid #FFF;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    
+}

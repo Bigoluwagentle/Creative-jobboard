@@ -23,7 +23,7 @@ function LandingPage(){
                 <header>
                     <img src={Logo} alt="logo" />
                     <div>
-                        <li>Home</li>
+                        <li className="active">Home</li>
                         <li>About us</li>
                         <li>Pricing</li>
                         <li>Blog</li>

@@ -1,0 +1,75 @@
+import Logo from "../img/LOGO (1).svg";
+import { Link } from "react-router-dom";
+import "./Header.css";
+import { motion } from "framer-motion";
+import Menu from "../img/bx_menu.svg";
+import Close from "../img/icon-close.svg";
+import Logo1 from "../img/LOGO.svg";
+function Header(){
+    return(
+        <div id="mobiles">
+            <header>
+                <img src={Logo} alt="logo" />
+                <div>
+                    <li className="active">Home</li>
+                    <li onClick={() => {
+                        document.querySelector("#about").click();
+                    }}>About us</li>
+                    <li>Pricing</li>
+                    <li>Blog</li>
+                </div>
+                <motion.div id="pro"
+                    transition={{ duration: 2, type: "spring", stiffness: 300 }}
+                    whileHover={{
+                        scale: 1.2
+                    }}
+                >
+                <i class="fa-solid fa-user"></i>
+                <h4>Hi, Abdulmalik <i class="fa-solid fa-chevron-down"></i></h4>
+                
+                </motion.div>
+                <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
+                    document.querySelector("#mobile").style.display = "block";
+                }} />
+            </header>
+
+            <motion.div id="mobile"
+                initial={{ opacity: 0, y: 150 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 20, type: "spring", stiffness: 400 }}
+            >
+                <div className="mobile">
+                    <nav>
+                        <img src={Logo1} alt="" />
+                        <img src={Close} alt="close" style={{width: "20px"}} onClick={() => {
+                            document.querySelector("#mobile").style.display = "none";
+                        }} />
+                    </nav>
+                    <div>
+                        <li onClick={() => {
+                            document.querySelector("#home").click();
+                        }}>Home</li>
+                        <li onClick={() => {
+                            document.querySelector("#about").click();
+                        }}>About us</li>
+                        <li>Pricing</li>
+                        <li>Blog</li>
+                    </div>
+
+                    <button onClick={() => {
+                        document.querySelector("#log").click();
+                    }}>Login</button>
+
+                    <button onClick={() => { 
+                        document.querySelector("#Signup").click();
+                    }}>Sign up</button>
+                    <Link to="/Signup" id="Signup"/>
+                    <Link to="/Login" id="log"/>
+                    <Link to="/About us" id="about"/>
+                    <Link to="/Dashboard" id="home"/>
+                </div>
+            </motion.div>
+        </div>
+    )
+}
+export default Header;
