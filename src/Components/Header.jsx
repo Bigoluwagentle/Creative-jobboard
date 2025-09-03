@@ -27,7 +27,9 @@ function Header(){
                     <li onClick={() => {
                         document.querySelector("#about").click();
                     }}>About us</li>
-                    <li>Pricing</li>
+                    <li onClick={() => {
+                        document.querySelector("#price").click();
+                    }}>Pricing</li>
                     <li>Blog</li>
                 </div>
                 <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
@@ -65,7 +67,9 @@ function Header(){
                         <li onClick={() => {
                             document.querySelector("#about").click();
                         }}>About us</li>
-                        <li>Pricing</li>
+                        <li onClick={() => {
+                            document.querySelector("#price").click();
+                        }}>Pricing</li>
                         <li>Blog</li>
                     </div>
 
@@ -80,6 +84,7 @@ function Header(){
                     <Link to="/Login" id="log"/>
                     <Link to="/About us" id="about"/>
                     <Link to="/Dashboard" id="home"/>
+                    <Link to="/Pricing" id="price"/>
                 </div>
             </motion.div>
         </div>
