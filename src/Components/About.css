@@ -1,8 +1,9 @@
 #about{
     width: 100%;
     min-height: 100vh;
-    background-color: #FDFDFD;
+    /* background-color: #FDFDFD; */
     overflow: hidden;
+    background-color: red;
     > section{
         display: flex;
         flex-direction: column;
