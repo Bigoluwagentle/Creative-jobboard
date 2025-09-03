@@ -262,9 +262,10 @@
             }
         }
         #content{
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;            
             > div{
-                width: 48%;
+                width: 90%;
                 padding-bottom: 20px;
                 padding-top: 20px;
                 > p{

@@ -30,7 +30,9 @@ function Header(){
                     <li onClick={() => {
                         document.querySelector("#price").click();
                     }}>Pricing</li>
-                    <li>Blog</li>
+                    <li onClick={() => {
+                        document.querySelector("#blogers").click();
+                    }}>Blog</li>
                 </div>
                 <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
                     document.querySelector("#mobile").style.display = "block";
@@ -40,10 +42,12 @@ function Header(){
                     whileHover={{
                         scale: 1.2
                     }}
+                    onClick= {() => {
+                       document.querySelector("#myprofile").click();
+                    }}
                 >
                 <i class="fa-solid fa-user"></i>
                 <h4>Hi <i class="fa-solid fa-chevron-down"></i></h4>
-                
                 </motion.div>
                 
             </header>
@@ -70,7 +74,9 @@ function Header(){
                         <li onClick={() => {
                             document.querySelector("#price").click();
                         }}>Pricing</li>
-                        <li>Blog</li>
+                        <li onClick={() => {
+                            document.querySelector("#blogers").click();
+                        }}>Blog</li>
                     </div>
 
                     <button onClick={() => {
@@ -85,6 +91,9 @@ function Header(){
                     <Link to="/About us" id="about"/>
                     <Link to="/Dashboard" id="home"/>
                     <Link to="/Pricing" id="price"/>
+                    <Link to="/Blog" id="blogers"/>
+                    <Link to="/Profile" id="myprofile"/>
+                    
                 </div>
             </motion.div>
         </div>

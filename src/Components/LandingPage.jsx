@@ -24,9 +24,9 @@ function LandingPage(){
                     <img src={Logo} alt="logo" />
                     <div>
                         <li className="active">Home</li>
-                        <li>About us</li>
+                        {/* <li>About us</li>
                         <li>Pricing</li>
-                        <li>Blog</li>
+                        <li>Blog</li> */}
                     </div>
                     <motion.div
                         initial={{ opacity: 0, x: 150 }}
@@ -57,9 +57,9 @@ function LandingPage(){
                         </nav>
                         <div>
                             <li>Home</li>
-                            <li>About us</li>
+                            {/* <li>About us</li>
                             <li>Pricing</li>
-                            <li>Blog</li>
+                            <li>Blog</li> */}
                         </div>
 
                         <button onClick={() => {
