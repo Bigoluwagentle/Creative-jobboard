@@ -316,6 +316,7 @@
                     > p{
                         text-align: center;
                         width: 90%;
+                        line-height: 30px;
                     }
                 }
             }
@@ -395,9 +396,14 @@
                 flex-direction: column;
                 align-items: center;
                 > div{
-                    width: 80%;
+                    width: 90%;
+                    background-color: #14E522;
                     > p{
                         font-size: 14px;
+                    }
+                    > button{
+                        background-color: #E7F0FD;
+                        color: #14E522;
                     }
                 }
             }
