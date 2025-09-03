@@ -30,6 +30,9 @@ function Header(){
                     <li>Pricing</li>
                     <li>Blog</li>
                 </div>
+                <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
+                    document.querySelector("#mobile").style.display = "block";
+                }} />
                 <motion.div id="pro"
                     transition={{ duration: 2, type: "spring", stiffness: 300 }}
                     whileHover={{
@@ -37,12 +40,10 @@ function Header(){
                     }}
                 >
                 <i class="fa-solid fa-user"></i>
-                <h4>Hi, Abdulmalik <i class="fa-solid fa-chevron-down"></i></h4>
+                <h4>Hi <i class="fa-solid fa-chevron-down"></i></h4>
                 
                 </motion.div>
-                <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
-                    document.querySelector("#mobile").style.display = "block";
-                }} />
+                
             </header>
 
             <motion.div id="mobile"
