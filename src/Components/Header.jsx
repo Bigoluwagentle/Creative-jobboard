@@ -1,17 +1,29 @@
 import Logo from "../img/LOGO (1).svg";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Menu from "../img/bx_menu.svg";
 import Close from "../img/icon-close.svg";
 import Logo1 from "../img/LOGO.svg";
 function Header(){
+    useEffect(() => {
+            document.querySelectorAll("header > div li").forEach(item => {
+                item.onclick = function(e){
+                    e.preventDefault();
+                    document.querySelectorAll("header > div li").forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                };
+            })
+        }, [])
     return(
         <div id="mobiles">
             <header>
                 <img src={Logo} alt="logo" />
                 <div>
-                    <li className="active">Home</li>
+                    <li onClick={() => {
+                        document.querySelector("#home").click();
+                    }}>Home</li>
                     <li onClick={() => {
                         document.querySelector("#about").click();
                     }}>About us</li>

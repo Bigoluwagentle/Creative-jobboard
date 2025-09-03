@@ -7,7 +7,6 @@ import LandingPage from './Components/LandingPage.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import Profile from './Components/Profile.jsx';
 import About from './Components/About.jsx';
-import Header from './Components/Header.jsx';
 
 function App() {
   return (
@@ -16,9 +15,6 @@ function App() {
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Signup' element={<Signup/>}/>
         <Route path='/Account' element={<Account/>}/>
-      </Routes>
-      <Header/>
-      <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/Dashboard' element={<Dashboard/>}/>
         <Route path='/About us' element={<About/>}/>

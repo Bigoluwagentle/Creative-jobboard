@@ -8,11 +8,13 @@ import Star from "../img/solar_star-bold-duotone.svg";
 import Frame33 from "../img/Frame 33.svg";
 import Frame73 from "../img/Frame 73.svg";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function Dashboard(){
     return(
         <div id="dashboard">
             <div id="header">
+                <Header/>
                 <section>
                     <aside>
                         <h1>Join the <span>Global Phenomenon</span> in the recruitment space</h1>
@@ -25,7 +27,7 @@ function Dashboard(){
                             scale: 1.2
                             }}
                             onClick={() => { document.querySelector("#Signup").click();}}
-                        >Get Started</motion.button>
+                        >See All Job Listing</motion.button>
                     </aside>
                     <motion.img src={HeaderImage} alt="headerimage"
                         initial={{ y: -200 }}

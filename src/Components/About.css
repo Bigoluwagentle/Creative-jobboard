@@ -247,7 +247,8 @@
     #about{
         > section{
             > h2{
-                width: 95%;
+                width: 100%;
+                font-size: 30px;
             }
             > p{
                 width: 90%;
@@ -265,7 +266,8 @@
                 align-items: center;
                 text-align: center;
                 > p{
-                    width: 90%;
+                    width: 100%;
+                    line-height: 25px;
                 }
                 
             }
@@ -296,15 +298,18 @@
         }
         #container{
             > p{
-                width: 90%;
+                width: 97%;
+                line-height: 25px;
             }
             > img{
                 width: 80%;
+                margin-top: 30px;
             }
         }
         .content{
             > p, h4{
                 width: 100%;
+                line-height: 25px;
             }
             nav{
                 width: 80%;

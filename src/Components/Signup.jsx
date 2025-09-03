@@ -48,9 +48,9 @@ function Signup(){
                 </article>
             </section>
             <motion.section
-                initial={{ y: -150 }}
+                initial={{ y: 150, opacity: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                transition={{ duration: 25, delay: 0.5, type: "spring", stiffness: 300 }}
             >
                 <p>Already have an account ? <span onClick={() => {
                     document.querySelector("#login").click();
@@ -103,12 +103,13 @@ function Signup(){
                     <div id="div">
                         <button>Back</button>
                         <button onClick={() => {
-                            document.querySelector("#login").click();
+                            document.querySelector("#logins").click();
                         }}>Sign up</button>
                     </div>
                 </form>
+                <Link to="/Login" id="logins"/>
             </motion.section>
-            <Link to="/Login" id="login"/>
+            
         </div>
     )
 }

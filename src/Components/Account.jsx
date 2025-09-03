@@ -1,11 +1,21 @@
 import "./Account.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Logo from "../img/LOGO.svg";
 import Approve from "../img/mdi_approve.svg";
 import Bulb from "../img/ion_bulb.svg";
 import Hiring from "../img/material-symbols-light_tab-search.svg";
-
 function Account(){
+    useEffect(() => {
+        document.querySelectorAll("section > aside").forEach(item => {
+            item.onclick = function(events){
+                events.preventDefault();
+                document.querySelectorAll("section > aside").forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            };
+        })
+    }, [])
+    
     return(
         <div id="account">
             <section className="account">

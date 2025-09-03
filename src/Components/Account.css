@@ -49,6 +49,7 @@
                     background-color: #69b36e;
                     color: #FFF;
                 }
+                
                 > img{
                     margin-right: 20px;
                     width: 30px;
@@ -62,6 +63,10 @@
                         font-size: 14px;
                     }
                 }
+            }
+            .active{
+                background-color: #69b36e;
+                color: #FFF;
             }
             > button{
                 display: block;

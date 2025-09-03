@@ -7,10 +7,12 @@ import Frame500 from "../img/Frame 500.svg";
 import Frame5001 from "../img/Frame 500 (1).svg";
 import Image34 from "../img/image 34.svg";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function About(){
     return(
-        <div id="about">
+        <div id="about" onLoad={(e) => e.preventDefault()}>
+            <Header/>
             <section>
                 <h2>We’re a team of creators and innovators changing the whole game into a faster squirrel</h2>
                 <p>If you believe in the strength and power of creative thinking in recruiting and if you are a team player and lover of thrive a fast paced environment then get ready to play a crucial part in our creation of the future.</p>
