@@ -11,7 +11,7 @@ import Header from "./Header";
 
 function About(){
     return(
-        <div id="about" onLoad={(e) => e.preventDefault()}>
+        <div id="about">
             <Header/>
             <section>
                 <h2>We’re a team of creators and innovators changing the whole game into a faster squirrel</h2>
