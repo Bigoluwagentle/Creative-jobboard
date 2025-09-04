@@ -1,4 +1,5 @@
-import "./About.css";
+// import "./About.css";
+import "./Style.css";
 import { motion } from "framer-motion";
 import Frame32 from "../img/Frame 32.svg";
 import Frame36 from "../img/Frame 36.svg";
