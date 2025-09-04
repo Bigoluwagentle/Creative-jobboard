@@ -1,5 +1,7 @@
 // import "./About.css";
 import "./Style.css";
+import Footer from "./Footer";
+import Header from "./Header";
 import { motion } from "framer-motion";
 import Frame32 from "../img/Frame 32.svg";
 import Frame36 from "../img/Frame 36.svg";
@@ -7,8 +9,7 @@ import Frame361 from "../img/Frame 36 (1).svg";
 import Frame500 from "../img/Frame 500.svg";
 import Frame5001 from "../img/Frame 500 (1).svg";
 import Image34 from "../img/image 34.svg";
-import Footer from "./Footer";
-import Header from "./Header";
+
 
 function About(){
     return(
