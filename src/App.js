@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './Components/LandingPage.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import Profile from './Components/Profile.jsx';
-import About from './Components/About.jsx';
+import About from './Components/index.jsx';
 import Pricing from './Components/Pricing.jsx';
 import Blog from './Components/Blog.jsx';
 
