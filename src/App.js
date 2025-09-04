@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './Components/LandingPage.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import Profile from './Components/Profile.jsx';
-import About from './Components/index.jsx';
+import About from './Components/About.jsx';
 import Pricing from './Components/Pricing.jsx';
 import Blog from './Components/Blog.jsx';
 
@@ -19,7 +19,7 @@ function App() {
         <Route path='/Account' element={<Account/>}/>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/Dashboard' element={<Dashboard/>}/>
-        <Route path='/About us' element={<About/>}/>
+        <Route path='/Aboutus' element={<About/>}/>
         <Route path='/Pricing' element={<Pricing/>}/>
         <Route path='/Profile' element={<Profile/>}/>
         <Route path='/Blog' element={<Blog/>}/>

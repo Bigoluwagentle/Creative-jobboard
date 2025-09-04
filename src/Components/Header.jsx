@@ -25,7 +25,7 @@ function Header(){
                         document.querySelector("#home").click();
                     }}>Home</li>
                     <li onClick={() => {
-                        document.querySelector("#about").click();
+                        document.querySelector("#abouter").click();
                     }}>About us</li>
                     <li onClick={() => {
                         document.querySelector("#price").click();
@@ -88,7 +88,7 @@ function Header(){
                     }}>Sign up</button>
                     <Link to="/Signup" id="Signup"/>
                     <Link to="/Login" id="log"/>
-                    <Link to="/About us" id="about"/>
+                    <Link to="/Aboutus" id="abouter"/>
                     <Link to="/Dashboard" id="home"/>
                     <Link to="/Pricing" id="price"/>
                     <Link to="/Blog" id="blogers"/>

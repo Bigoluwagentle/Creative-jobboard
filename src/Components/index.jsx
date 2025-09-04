@@ -1,3 +1,4 @@
+
 import "./Blog.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,7 +10,6 @@ import Img4 from "../img/Frame 614 (4).svg";
 import Img5 from "../img/Frame 614 (5).svg";
 import Img6 from "../img/Frame 614 (6).svg";
 import Group from "../img/Group.svg";
-
 function Aboutus(){
     return(
         <div id="blog">
