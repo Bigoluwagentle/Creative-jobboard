@@ -1,4 +1,4 @@
-#about{
+#abouting{
     width: 100%;
     min-height: 100vh;
     background-color: #FDFDFD;
@@ -244,7 +244,7 @@
     }
 }
 @media screen and (max-width: 800px){
-    #about{
+    #abouting{
         > section{
             > h2{
                 width: 100%;

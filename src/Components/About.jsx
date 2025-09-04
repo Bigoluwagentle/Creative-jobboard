@@ -1,4 +1,4 @@
-// import "./About.css";
+import "./About.css";
 import "./Style.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -13,7 +13,7 @@ import Image34 from "../img/image 34.svg";
 
 function About(){
     return(
-        <div id="about">
+        <div id="abouting">
             <Header/>
             <section>
                 <h2>We’re a team of creators and innovators changing the whole game into a faster squirrel</h2>
