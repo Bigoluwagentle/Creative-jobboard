@@ -19,7 +19,7 @@ function App() {
         <Route path='/Account' element={<Account/>}/>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/Dashboard' element={<Dashboard/>}/>
-        <Route path='/Aboutus' element={<About/>}/>
+        <Route path='/Aboutus' element={<Pricing/>}/>
         <Route path='/Pricing' element={<Pricing/>}/>
         <Route path='/Profile' element={<Profile/>}/>
         <Route path='/Blog' element={<Blog/>}/>

@@ -24,9 +24,9 @@ function Header(){
                     <li onClick={() => {
                         document.querySelector("#home").click();
                     }}>Home</li>
-                    <li onClick={() => {
+                    {/* <li onClick={() => {
                         document.querySelector("#abouter").click();
-                    }}>About us</li>
+                    }}>About us</li> */}
                     <li onClick={() => {
                         document.querySelector("#price").click();
                     }}>Pricing</li>
@@ -68,9 +68,9 @@ function Header(){
                         <li onClick={() => {
                             document.querySelector("#home").click();
                         }}>Home</li>
-                        <li onClick={() => {
+                        {/* <li onClick={() => {
                             document.querySelector("#about").click();
-                        }}>About us</li>
+                        }}>About us</li> */}
                         <li onClick={() => {
                             document.querySelector("#price").click();
                         }}>Pricing</li>
