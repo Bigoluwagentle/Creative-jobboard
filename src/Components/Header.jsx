@@ -33,6 +33,9 @@ function Header(){
                     <li onClick={() => {
                         document.querySelector("#blogers").click();
                     }}>Blog</li>
+                    <li onClick={() => {
+                        document.querySelector("#jobbs").click();
+                    }}>Job Listing</li>
                 </div>
                 <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
                     document.querySelector("#mobile").style.display = "block";
@@ -68,24 +71,17 @@ function Header(){
                         <li onClick={() => {
                             document.querySelector("#home").click();
                         }}>Home</li>
-                        {/* <li onClick={() => {
-                            document.querySelector("#about").click();
-                        }}>About us</li> */}
+                        
                         <li onClick={() => {
                             document.querySelector("#price").click();
                         }}>Pricing</li>
                         <li onClick={() => {
                             document.querySelector("#blogers").click();
                         }}>Blog</li>
+                        <li onClick={() => {
+                        document.querySelector("#jobbs").click();
+                    }}>Job Listing</li>
                     </div>
-
-                    <button onClick={() => {
-                        document.querySelector("#log").click();
-                    }}>Login</button>
-
-                    <button onClick={() => { 
-                        document.querySelector("#Signup").click();
-                    }}>Sign up</button>
                     <Link to="/Signup" id="Signup"/>
                     <Link to="/Login" id="log"/>
                     <Link to="/Aboutus" id="abouter"/>
@@ -93,7 +89,7 @@ function Header(){
                     <Link to="/Pricing" id="price"/>
                     <Link to="/Blog" id="blogers"/>
                     <Link to="/Profile" id="myprofile"/>
-                    
+                    <Link to="/Job-Listing" id="jobbs"/>
                 </div>
             </motion.div>
         </div>

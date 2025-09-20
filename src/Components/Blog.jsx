@@ -1,4 +1,5 @@
 import "./Blog.css";
+import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import Frame614 from "../img/Frame 614.svg";
@@ -15,8 +16,16 @@ function Blog(){
         <div id="blog">
             <Header/>
             <section>
-                <h2>All our Taught in One Place</h2>
-                <p>Take a tip down the minds of our creators writers by going through these resources perfectly and give feedbacks to those articles you are reading.</p>
+                <motion.h2
+                    initial={{opacity:0, y:50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1}}
+                >All our Taught in One Place</motion.h2>
+                <motion.p
+                    initial={{opacity:0, y:-50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1.5}}
+                >Take a tip down the minds of our creators writers by going through these resources perfectly and give feedbacks to those articles you are reading.</motion.p>
                 <div>
                     <span>All</span>
                     <span>Tech</span>
@@ -35,7 +44,11 @@ function Blog(){
                 <img src={Frame614} alt="" />
                 <span>ALL ARTICLES</span>
                 <div>
-                    <nav>
+                    <motion.nav
+                        initial={{opacity:0, y:100}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:1, delay:0.2}}
+                    >
                         <img src={Img1} alt="" />
                         <div>
                             <li>PRODUCTS</li>
@@ -49,8 +62,12 @@ function Blog(){
                                 </div>
                             </nav>
                         </div>
-                    </nav>
-                    <nav>
+                    </motion.nav>
+                    <motion.nav
+                        initial={{opacity:0, y:100}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:1, delay:0.4}}
+                    >
                         <img src={Img2} alt="" />
                         <div>
                             <li>PRODUCTS</li>
@@ -64,8 +81,12 @@ function Blog(){
                                 </div>
                             </nav>
                         </div>
-                    </nav>
-                    <nav>
+                    </motion.nav>
+                    <motion.nav
+                        initial={{opacity:0, y:100}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:1, delay:0.6}}
+                    >
                         <img src={Img3} alt="" />
                         <div>
                             <li>PRODUCTS</li>
@@ -80,8 +101,12 @@ function Blog(){
                                 
                             </nav>
                         </div>
-                    </nav>
-                    <nav>
+                    </motion.nav>
+                    <motion.nav
+                        initial={{opacity:0, y:100}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:1, delay:0.8}}
+                    >
                         <img src={Img4} alt="" />
                         <div>
                             <li>PRODUCTS</li>
@@ -95,8 +120,12 @@ function Blog(){
                                 </div>
                             </nav>
                         </div>
-                    </nav>
-                    <nav>
+                    </motion.nav>
+                    <motion.nav
+                        initial={{opacity:0, y:100}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:1, delay:1}}
+                    >
                         <img src={Img5} alt="" />
                         <div>
                             <li>PRODUCTS</li>
@@ -110,8 +139,12 @@ function Blog(){
                                 </div>
                             </nav>
                         </div>
-                    </nav>
-                    <nav>
+                    </motion.nav>
+                    <motion.nav
+                        initial={{opacity:0, y:100}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:1, delay:1.2}}
+                    >
                         <img src={Img6} alt="" />
                         <div>
                             <li>PRODUCTS</li>
@@ -125,7 +158,7 @@ function Blog(){
                                 </div>
                             </nav>
                         </div>
-                    </nav>
+                    </motion.nav>
                     
                 </div>
             </div>

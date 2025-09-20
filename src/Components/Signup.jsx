@@ -11,6 +11,28 @@ import Password from "../img/mdi_password.svg";
 import Email from "../img/ic_baseline-email.svg";
 
 function Signup(){
+    function signUps(){
+        if(document.querySelector("#fname").value.length == "" || document.querySelector("#lname").value.length == "" || document.querySelector("#pass").value.length == ""){
+            alert("Enter your information")
+        }else{
+            const username = document.getElementById("useremail").value; 
+            const password = document.getElementById("pass").value; 
+            
+            if (!username || !password) { 
+                alert("fill all the fields");
+            } 
+            let users = JSON.parse(localStorage.getItem("users")) || []; 
+            if (username && password) { 
+                document.querySelector("#logins").click();
+                users.push({ username, password }); 
+                localStorage.setItem("users", JSON.stringify(users));
+            }else if(users.find(user => user.username === username || user.password === password)){
+                alert("Email already exists.");
+            }
+            
+        }
+        
+    }
     return(
         <div id="signup">
             <section className="account">
@@ -61,35 +83,29 @@ function Signup(){
                     <button> <img src={Facebook} alt="" /> Continue with Facebook</button>
                     <button> <img src={Google} alt="" /> Continue with Goggle </button>
                 </nav>
-                <form>
+                <form onSubmit={(e) => e.preventDefault()}>
                     <div className="div">
                         <nav>
                             <label htmlFor="First Name">First Name</label>
                             <summary>
                                 <img src={Profile} alt="" />
-                                <input type="text" placeholder="Enter your First Name" />
+                                <input type="text" id="fname" placeholder="Enter your First Name" />
                             </summary>
                         </nav>
                         <nav>
                             <label htmlFor="Last Name">Last Name</label>
                             <summary>
                                 <img src={Profile} alt="" />
-                                <input type="text" placeholder="Enter your Last Name" />
+                                <input type="text" id="lname" placeholder="Enter your Last Name" />
                             </summary>
                         </nav>
                     </div>
-                    <div>
-                        <label htmlFor="Phone Number">Phone Number</label>
-                        <summary>
-                            <img src={Call} alt="" />
-                            <input type="text" placeholder="Enter your Phone Number" />
-                        </summary>
-                    </div>
+                    
                     <div>
                         <label htmlFor="Email address">Email address</label>
                         <summary>
                             <img src={Email} alt="" />
-                            <input type="text" placeholder="Enter your Email Address" />
+                            <input type="text" id="useremail" placeholder="Enter your Email Address" />
                         </summary>
                     </div>
                 
@@ -97,17 +113,18 @@ function Signup(){
                         <label htmlFor="Password">Password</label>
                         <summary>
                             <img src={Password} alt="" />
-                            <input type="text" placeholder="Create a secure password" />
+                            <input type="text" id="pass" placeholder="Create a secure password" />
                         </summary>
                     </div>
                     <div id="div">
-                        <button>Back</button>
                         <button onClick={() => {
-                            document.querySelector("#logins").click();
-                        }}>Sign up</button>
+                            document.querySelector("#accn").click();
+                        }}>Back</button>
+                        <button onClick={signUps}>Sign up</button>
                     </div>
                 </form>
                 <Link to="/Login" id="logins"/>
+                <Link to="/Account" id="accn"/>
             </motion.section>
             
         </div>

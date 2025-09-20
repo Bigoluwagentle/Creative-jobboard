@@ -36,8 +36,12 @@ function LandingPage(){
                         scale: 1.2
                         }}
                     >
-                        <button>Log in</button>
-                        <button>Sign up</button>
+                        <button onClick={() => {
+                            document.querySelector("#log").click();
+                        }}>Log in</button>
+                        <button onClick={() => {
+                            document.querySelector("#Signup").click();
+                        }}>Sign up</button>
                     </motion.div>
                     <img src={Menu} alt="menu" id="menu" style={{width: "30px"}} onClick={() => {
                         document.querySelector("#mobile").style.display = "block";
@@ -134,6 +138,7 @@ function LandingPage(){
                         whileHover={{
                         scale: 1.2
                         }}
+                        onClick={() => { document.querySelector("#Signup").click();}}
                     >See All Categories</motion.button>
                 </nav>
                 <img src={Group} alt="group" />
@@ -186,6 +191,7 @@ function LandingPage(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -199,6 +205,7 @@ function LandingPage(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -212,6 +219,7 @@ function LandingPage(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -225,6 +233,7 @@ function LandingPage(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -238,6 +247,7 @@ function LandingPage(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -251,6 +261,7 @@ function LandingPage(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signup").click();}}
                         >Apply Now</motion.button>
                     </div>
                 </section>
@@ -265,8 +276,10 @@ function LandingPage(){
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 25, type: "spring", stiffness: 300 }}
                     >
-                        <input type="email" placeholder="Enter Your Email Address" />
-                        <button>Subscribe</button>
+                        <input type="email" id="emails" placeholder="Enter Your Email Address" />
+                        <button onClick={() => {
+                            alert("Thanks for your support")
+                        }}>Subscribe</button>
                     </motion.div>
                 </nav>
                 <img src={Frame73} alt="framer" />

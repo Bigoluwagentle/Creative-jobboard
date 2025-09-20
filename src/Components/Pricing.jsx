@@ -1,4 +1,5 @@
 import "./Pricing.css";
+import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import Vector from "../img/Vector (1).svg";
@@ -9,16 +10,36 @@ function Pricing(){
         <div id="pricing">
             <Header/>
             <div id="container">
-                <h2>Choose a plan tailored to your needs</h2>
-                <p>You are one-of-a kind, so shouldn’t you plan be too? With Creative. you can pick and choose the features you need to create a custom plan that fits you perfectly.</p>
+                <motion.h2
+                    initial={{opacity:0, y:50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1}}
+                >Choose a plan tailored to your needs</motion.h2>
+                <motion.p
+                    initial={{opacity:0, y:-50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1.5}}
+                >You are one-of-a kind, so shouldn’t you plan be too? With Creative. you can pick and choose the features you need to create a custom plan that fits you perfectly.</motion.p>
                 <div>
-                    <button>Montly</button>
-                    <button>Annually</button>
+                    <motion.button
+                        initial={{opacity:0, x:-50}}
+                        whileInView={{opacity:1, x:0}}
+                        transition={{duration:5, delay: 0.3, type:"spring", stiffness: 150}}
+                    >Montly</motion.button>
+                    <motion.button
+                        initial={{opacity:0, x:50}}
+                        whileInView={{opacity:1, x:0}}
+                        transition={{duration:5, delay: 0.3, type:"spring", stiffness: 150}}
+                    >Annually</motion.button>
                 </div>
             </div>
 
             <div id="wrapper">
-                <div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:0.5}}
+                >
                     <span>Lite</span>
                     <p>Best for professionals</p>
                     <h4>$0/<p>month</p></h4>
@@ -29,8 +50,12 @@ function Pricing(){
                         <li>Access to apply 1 job daily</li>
                     </nav>
                     <button>Get Started</button>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:-100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:0.8}}
+                >
                     <span>Basic</span>
                     <p>More Features customizes for you</p>
                     <h4>$14.96/<p>month</p></h4>
@@ -41,8 +66,12 @@ function Pricing(){
                         <li>Ai chat bot</li>
                     </nav>
                     <button>Get Started</button>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:1.1}}
+                >
                     <span>Pro</span>
                     <p>Best Features customizes for expert</p>
                     <h4>$32.96/<p>month</p></h4>
@@ -53,7 +82,7 @@ function Pricing(){
                         <li>Chat widget</li>
                     </nav>
                     <button>Get Started</button>
-                </div>
+                </motion.div>
             </div>
             <span>Feature Companion</span>
 
@@ -151,7 +180,11 @@ function Pricing(){
             <p>Here is what our Clients think of us</p>
 
             <div id="content">
-                <div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:0.5}}
+                >
                     <img src={Vector} alt="" />
                     <p>Signed up on Creative in the summer summer 2020. did  quick check up for job search and i found my dream job. then i fuel up the energy to apply on the job then the rest s a story today. so glad.</p>
                     <nav>
@@ -161,8 +194,12 @@ function Pricing(){
                             <li>Snr Staff at Meta</li>
                         </div>
                     </nav>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:0.7}}
+                >
                     <img src={Vector} alt="" />
                     <p>Joined Creative during winter break 2023. Their portfolio builder helped me land my first internship. Now I wake up excited to work on projects I'm passionate about every single morning.</p>
                     <nav>
@@ -172,8 +209,12 @@ function Pricing(){
                             <li>Snr Staff at Grove</li>
                         </div>
                     </nav>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:0.9}}
+                >
                     <img src={Vector} alt="" />
                     <p>Signed up on Creative in the summer summer 2020. did  quick check up for job search and i found my dream job. then i fuel up the energy to apply on the job then the rest s a story today. so glad.</p>
                     <nav>
@@ -183,8 +224,12 @@ function Pricing(){
                             <li>Snr Staff at Grove</li>
                         </div>
                     </nav>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:1.1}}
+                >
                     <img src={Vector} alt="" />
                     <p>Used Creative throughout 2022 for my career change journey. Their resource library guided me through every step perfectly. Now I finally have the work-life balance I've always wanted to achieve.</p>
                     <nav>
@@ -194,8 +239,12 @@ function Pricing(){
                             <li>Snr Staff at Grove</li>
                         </div>
                     </nav>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:1.3}}
+                >
                     <img src={Vector} alt="" />
                     <p>Joined Creative during winter break 2023. Their portfolio builder helped me land my first internship. Now I wake up excited to work on projects I'm passionate about every single morning.</p>
                     <nav>
@@ -205,8 +254,12 @@ function Pricing(){
                             <li>Snr Staff at Grove</li>
                         </div>
                     </nav>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{opacity:0, y:100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:1, delay:1.5}}
+                >
                     <img src={Vector} alt="" />
                     <p>Signed up on Creative in the summer summer 2020. did  quick check up for job search and i found my dream job. then i fuel up the energy to apply on the job then the rest s a story today. so glad.</p>
                     <nav>
@@ -216,7 +269,7 @@ function Pricing(){
                             <li>Snr Staff at Grove</li>
                         </div>
                     </nav>
-                </div>
+                </motion.div>
             </div>
             <Footer/>
                 

@@ -26,7 +26,7 @@ function Dashboard(){
                             whileHover={{
                             scale: 1.2
                             }}
-                            onClick={() => { document.querySelector("#Signup").click();}}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >See All Job Listing</motion.button>
                     </aside>
                     <motion.img src={HeaderImage} alt="headerimage"
@@ -78,6 +78,7 @@ function Dashboard(){
                         whileHover={{
                         scale: 1.2
                         }}
+                        onClick={() => { document.querySelector("#Signups").click();}}
                     >See All Categories</motion.button>
                 </nav>
                 <img src={Group} alt="group" />
@@ -130,6 +131,7 @@ function Dashboard(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -143,6 +145,7 @@ function Dashboard(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -156,6 +159,7 @@ function Dashboard(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -169,6 +173,7 @@ function Dashboard(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -182,6 +187,7 @@ function Dashboard(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >Apply Now</motion.button>
                     </div>
                     <div>
@@ -195,6 +201,7 @@ function Dashboard(){
                             initial={{ x: 250 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 25, type: "spring", stiffness: 300 }}
+                            onClick={() => { document.querySelector("#Signups").click();}}
                         >Apply Now</motion.button>
                     </div>
                 </section>
@@ -216,7 +223,7 @@ function Dashboard(){
                 <img src={Frame73} alt="framer" />
             </div>
             <Footer/>
-            <Link to="/Signup" id="Signup"/>
+            <Link to="/Job-Listing" id="Signups"/>
             <Link to="/Login" id="log"/>
             <Link to="/About us" id="about"/>
         </div>
